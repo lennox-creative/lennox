@@ -4,9 +4,13 @@
 .footer-text {
     font-family: $contentFont;
     color: $primaryColor;
-    width: 37.3%;
     letter-spacing: 0.023rem;
     line-height: 1.3rem;
+    width: 50%;
+
+    @include respond-to('xl') {
+        width: 37.3%;
+    }
 
     @include respond-to('xxl') {
         font-size: 1.4rem;

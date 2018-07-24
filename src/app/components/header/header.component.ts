@@ -10,16 +10,27 @@ import { IsMusicService } from '../../services/is-music.service';
 export class HeaderComponent implements OnInit {
   public logoText: string;
   public titleText: string;
+  public isMusic: boolean;
+  private clickedOnce: boolean;
 
   constructor(private isMusicService: IsMusicService) { }
 
   ngOnInit() {
     this.logoText = environment.logoText;
     this.titleText = environment.titleText;
+
+    this.isMusicService.isMusic$.subscribe(res => {
+      this.isMusic = res;
+      if (res) {
+        this.clickedOnce = true;
+      }
+    });
   }
 
   setMusic(val: boolean) {
-    this.isMusicService.setIsMusic(val);
+    if (!this.clickedOnce) {
+      this.isMusicService.setIsMusic(val);
+    }
   }
 
 }
