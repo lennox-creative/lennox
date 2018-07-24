@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   public audioElm: HTMLAudioElement;
   public footerText: string;
   public isMusic: boolean;
+  public isMusicOn: boolean;
   private isMusicSubscription: Subscription;
 
   constructor(private isMusicService: IsMusicService) { }
