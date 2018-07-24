@@ -1,0 +1,22 @@
+@import "variables";
+@import "~src/fonts.css";
+
+.footer-text {
+    font-family: $contentFont;
+    color: $primaryColor;
+    width: 37.3%;
+    letter-spacing: 0.023rem;
+    line-height: 1.3rem;
+
+    @include respond-to('xxl') {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+.music {
+    svg, image {
+        width: 54px;
+        height: 42px;
+    }
+}

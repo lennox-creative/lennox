@@ -1,0 +1,7 @@
+<div id="main-carosel" class="carousel slide carousel-fade" data-ride="carousel" (click)="setMusic(true)">
+  <div class="carousel-inner">
+      <div class="carousel-item {{index === 0 ? 'active' : ''}}" *ngFor="let key of imagesAmount | numbersLoop; let index = index">
+          <img class="img-fluid" src="assets/images/{{key}}.jpg">
+      </div>
+  </div>
+</div>

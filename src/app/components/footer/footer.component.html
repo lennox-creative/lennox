@@ -1,0 +1,25 @@
+<footer class="d-flex flex-column justify-content-between mt-2 mt-xl-4">
+  <div class="footer-text align-self-center mb-xl-3">{{footerText}}</div>
+
+  <audio #bgMusicRef id="bg-music">
+    <source src="/assets/media/bg-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="music align-self-center {{isMusic ? '' : 'd-none'}}">
+
+    <div class="on {{isMusicOn ? 'd-none' : ''}}" (click)="isMusicOn = true;bgMusicRef.pause()">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37px" height="33px">
+        <image x="0px" y="0px" width="37px" height="33px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAhCAQAAAD0BqqeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBxUQDRNvifd3AAAC5ElEQVRIx33VW28cRRAF4K93x1d8iZ2bFDCQBEuAeLANCSQSEv+Qv8RLFBIkYyLHioiCE0XBGK8xCcQbX3aah92d6Z616dFqZ7qrT5061VUd4vdWonQEceS9/5+uNNdtFO74OjcZfR+uxxFnie1US7fe0P/VHs8CTx1ko9uqJ2PDqAlw/uizbOUcapD8O2RWGlZ9p610IWWSytyqwq/VCkLmJIEaib2CCzo2nWRA77xwOgDLoJqM8oC3/eg37zJnRzasKzP3LeeMKAiO/ewXPUUjc/NueeVRtuNcqIC/3PNce6BLf7bnkR1cs+KZ7fO0Sp9+YK+NJYoEtBx6YA/XXbfpnwqsqIF27CaMjuwIikR8tk276pb7fvKdaZ/b9asvBwkphpt3PVQKg/RGQbuRS/70h28tWvODLV+ZtGzTJ+bzAPeUxhTGtLUVA6C86lZdsO7YtM+8coAPjNk5+1zFAav0dNfCjlvxr5dYMukFJl22V6mYAQ2ZxAQ6UoU9730vlQoX7Sux6K2j/z8MaVbTUBd0HWNOqYfCqZM6g3U4MWEYyWoutxntHBmrYdpjVqZ5bXbMmMBrhQInCuM1VKpOXpFB3sc6fveh4MSeywI6Zo3n/WpSTykqB6HVBV3rdWjdRUt45tTHOLTnygCh0mpJx36iyameVsIwKD3Qs6btb0/cNIvnWq6lUEQTbjusGl5wYEtXO7kigo9cMuOth+Z8ijeeuum9gUVVg1HLTCLvjAs2dGoDwQ103VO6bUzPhknLeQaHXPJn1h3LykaDiy65awaP7Vs1UR2KQgXTPJxR4QvzHutqV2FOW0PpiadWXRGrFlCkm/Py7au0ZN6GN9mxCLZtWXGjmomDhnTGJV6fpWjONw5MZzf1ortV5oajSDenbFLYcVczoGjBwgiB5HY+/wKtlYyNmaGDrMmcZZCyCw0HQX29DS/eqZxBrtdZ37Eq+Xo2MlW4r9tk0uST6pde75n7jf8AFB8hrNNm6UUAAAAASUVORK5CYII="
+        />
+      </svg>
+    </div>
+
+    <div class="off {{!isMusicOn ? 'd-none' : ''}}" (click)="isMusicOn = false;bgMusicRef.play()">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35px" height="33px">
+        <image x="0px" y="0px" width="35px" height="33px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAhCAQAAAD5GNrZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBxUQCjCCrxDCAAACtElEQVRIx9XV61NTVxTG4efkAgRNBRoKsaBQHJVLLVgtzDhtp/+5FXGmF6QWFTFSCgwUCnLLRUgI6YemcJLA8KFMZ7q+nbXP/u213nft2UGl4t/HdOQSIGQvB+O/xVwk4IWYA1sNkIJyHTyEKfnQAFn3zIJAEMplTXkDoWzsdHnBoiE3T77z5q0paqtDJ3TLuKIvlAthuu2aseWOq8re+V1BtKbrkoJrYkYceqndtbOaajNu1LpJKygr1jXDskmrCAyLmT9P4kCf73SY9ly/b3QqOw6tX5fywjYSblu3VY8pycnLWZY3bsyWJ3ImDGtyhB2rSPhC3Jwj9Gi1UqvNrlkHIioKAp+5o9NLP+kxIuW9ilUZ9wxIGPTchk81SdlQEj+tZtOGgpy8QEXGlKyv3Lfpe1m3BO66ac420tqsqKBTWb62qaiIiAgCUTt+NqvLtzrM+FFWzIhmGRVRabtySKrIhjFB3ZxGlS14Zs9DX9rx1KK4UQX7SCopIC5weJZTYc+i9kyb0eFrXWb9oMW4ZsRFq9sDR7WY4AxU1LElU/bdN2bfpD+rgh5V79Tp9Magcs4NDkRlrejWK+WtF9aMaNMvgZKyljAmcFzlRxrqioiChGEpc566bUgU75EMY7rc8EGAvMPqtvp4Z8NDH5vzyqZBbQJXtYYxSQ+UBAI7MrbOUP4Pr6UFWoxJe2XKLf26q1qdaBTRDD7Rbtlv8nXtfeRzPeJK3uj2yFvzNg2eaNNgeNyACTcEJ27AFf3ijszJyGtxz4SiKa8Vz5+bpDEPdNTdb4q2DelTNKPskQHzlmqMb7A6rcOiJbnQMLSa0OTQr9akNBvWXgWcg4Fmd6XNVsv+O1qwbsWoXnD9n2MvenwL9qRrMgc2pWvPfxxzQbSezMZpRb0Nf/0vH98LIhnz+BIwv/wFFhbZtrZ5QkAAAAAASUVORK5CYII="
+        />
+      </svg>
+    </div>
+
+  </div>
+</footer>
