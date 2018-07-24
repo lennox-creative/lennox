@@ -16,7 +16,9 @@
 
 .music {
     svg, image {
-        width: 54px;
-        height: 42px;
+        @include respond-to('xxl') {
+            width: 54px;
+            height: 42px;
+        }
     }
 }

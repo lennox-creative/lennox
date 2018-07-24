@@ -46,7 +46,7 @@
               "src/favicon.png"
             ],
             "styles": [
-              {"input": "node_modules/bootstrap/dist/css/bootstrap.css"},
+              {"input": "src/sass/_variables.scss"},
               {"input": "src/sass/styles.scss"}
             ],
             "stylePreprocessorOptions": {
