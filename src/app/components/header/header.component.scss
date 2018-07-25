@@ -1,52 +1,55 @@
 @import "variables";
 
 .logo {
-    font-size: 30px;
-    font-family: $logoFont;
-    letter-spacing: -.03em;
+  font-size: 30px;
+  font-family: $logoFont;
+  letter-spacing: -.03em;
 
-    @include respond-to('xxl') {
-        font-size: 42px;
-        letter-spacing: -0.2rem;
-    }
+  @include respond-to('xxl') {
+    font-size: 42px;
+    letter-spacing: -0.2rem;
+  }
 }
 
 .title {
-    font-family: $titleFont;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.03rem;
+  font-family: $titleFont;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+  z-index: 9;
+
+  @include respond-to('xl2') {
+    left: -1rem;
+  }
+
+  @include respond-to('xxl') {
+    font-size: 18px;
+    left: -4rem;
+  }
+
+  span {
     cursor: pointer;
-    z-index: 9;
-
-    @include respond-to('xl2') {
-        left: -1rem;
-    }
-
-    @include respond-to('xxl') {
-        font-size: 18px;
-        left: -4rem;
-    }
+  }
 }
 
 .mail-icon-wrapper {
-    svg, image {
-        @include respond-to('xxl') {
-            width: 37px;
-            height: 30px;
-        }
+  svg, image {
+    @include respond-to('xxl') {
+      width: 37px;
+      height: 30px;
     }
+  }
 }
 
 .facebook-icon-wrapper {
-    svg, image {
-        @include respond-to('xxl') {
-            width: 20px;
-            height: 28px;
-        }
+  svg, image {
+    @include respond-to('xxl') {
+      width: 20px;
+      height: 28px;
     }
+  }
 }
 
 .music-on {
-    color: #ccc;
+  color: #ccc;
 }
