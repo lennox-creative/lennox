@@ -20,16 +20,14 @@ export class SliderComponent implements OnInit {
     this.imagesAmount = environment.imagesAmount + 1;
 
     this.isMusicService.isMusic$.subscribe(res => {
-      if (res) {
-        this.clickedOnce = true;
-      }
+      $(this.carousel.nativeElement).carousel();
+      this.clickedOnce = true;
     });
   }
 
   setMusic(val: boolean) {
     if (!this.clickedOnce) {
       this.isMusicService.setIsMusic(val);
-      $(this.carousel.nativeElement).carousel();
     }
   }
 
