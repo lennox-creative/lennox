@@ -8,7 +8,6 @@ import { IsMusicService } from '../../services/is-music.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public logoText: string;
   public titleText: string;
   public isMusic: boolean;
   private clickedOnce: boolean;
@@ -16,7 +15,6 @@ export class HeaderComponent implements OnInit {
   constructor(private isMusicService: IsMusicService) { }
 
   ngOnInit() {
-    this.logoText = environment.logoText;
     this.titleText = environment.titleText;
 
     this.isMusicService.isMusic$.subscribe(res => {
