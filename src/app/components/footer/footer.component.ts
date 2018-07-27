@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   @ViewChild('bgMusicRef') bgMusicRef: ElementRef;
   public audioElm: HTMLAudioElement;
   public footerText: string;
-  public isMusic: boolean;
+  public isMusic: boolean;ElementRef
   public isMusicOn: boolean;
   private isMusicSubscription: Subscription;
 

@@ -1,1 +1,7 @@
-@import "variables";
+@import 'variables';
+
+.main-wrapper {
+    @include respond-to('lg') {
+        min-height: 100vh;
+    }
+}
