@@ -10,16 +10,16 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 21cm,
-  xxl: 21cm,
+  xl: 30cm,
+  xxl: 30cm,
 ) !default;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 21cm,
-  xxl: 21cm,
+  xl: 30cm,
+  xxl: 30cm,
 ) !default;
 
 @mixin respond-to($breakpoint) {

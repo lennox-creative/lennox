@@ -12,7 +12,7 @@
 
   svg {
     @include respond-to('xxl') {
-      width: 405px;
+      width: 292px;
       height: 31px;
     }
   }
@@ -25,35 +25,8 @@
   letter-spacing: 0.03rem;
   z-index: 9;
 
-  @include respond-to('xl2') {
-    left: -1rem;
-  }
-
-  @include respond-to('xxl') {
-    font-size: 18px;
-    left: -4rem;
-  }
-
   span {
     cursor: pointer;
-  }
-}
-
-.mail-icon-wrapper {
-  svg, image {
-    @include respond-to('xxl') {
-      width: 37px;
-      height: 30px;
-    }
-  }
-}
-
-.facebook-icon-wrapper {
-  svg, image {
-    @include respond-to('xxl') {
-      width: 20px;
-      height: 28px;
-    }
   }
 }
 
