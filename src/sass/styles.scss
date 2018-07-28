@@ -5,31 +5,6 @@ html {
   direction: rtl;
 }
 
-::-webkit-scrollbar {
-    width: 2px;
-  }
-
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: none;
-    background: #f1f1f1;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: none;
-    background: #888;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  .disable-select {
-    -webkit-user-select: none;  
-    -moz-user-select: none;    
-    -ms-user-select: none;      
-    user-select: none;
-  }
-
-  .opacity-0 {
-    opacity: 0;
-  }
+.opacity-0 {
+  opacity: 0;
+}
