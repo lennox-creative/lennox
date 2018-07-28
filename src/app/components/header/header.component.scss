@@ -1,27 +1,9 @@
 @import "variables";
 
-.logo {
-  font-size: 30px;
-  font-family: $logoFont;
-  letter-spacing: -.03em;
-
-  @include respond-to('xxl') {
-    font-size: 42px;
-    letter-spacing: -0.2rem;
-  }
-
-  svg {
-    @include respond-to('xxl') {
-      width: 292px;
-      height: 31px;
-    }
-  }
-}
-
 .title {
   font-family: $titleFont;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.03rem;
   z-index: 9;
 

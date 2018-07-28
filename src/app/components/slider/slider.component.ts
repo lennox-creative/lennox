@@ -6,8 +6,7 @@ import 'bootstrap';
  
 @Component({
   selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  templateUrl: './slider.component.html'
 })
 export class SliderComponent implements OnInit {
   @ViewChild('carousel') carousel: ElementRef; 
