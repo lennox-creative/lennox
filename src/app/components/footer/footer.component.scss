@@ -5,7 +5,28 @@
     font-family: $contentFont;
     color: $primaryColor;
     letter-spacing: 0.023rem;
-    width: 50%;
-    font-size: 1rem;
-    line-height: 1.6rem;
+    width: 100%;
+    font-size: .6rem;
+    line-height: .8rem;
+
+    @include respond-to('sm') {
+      width: 80%;
+      font-size: .7rem;
+      line-height: 1rem;
+    }
+
+    @include respond-to('md') {
+      width: 60%;
+      font-size: .8rem;
+    }
+  
+    @include respond-to('lg') {
+      width: 60%;
+      font-size: 1rem;
+    }
+
+    @include respond-to('xl') {
+      width: 50%;
+      font-size: 1rem;
+    }
 }

@@ -11,11 +11,13 @@ export class HeaderComponent implements OnInit {
   public titleText: string;
   public isMusic: boolean;
   private clickedOnce: boolean;
+  public logoText: string;
 
   constructor(private isMusicService: IsMusicService) { }
 
   ngOnInit() {
     this.titleText = environment.titleText;
+    this.logoText = environment.logoText;
 
     this.isMusicService.isMusic$.subscribe(res => {
       this.isMusic = res;

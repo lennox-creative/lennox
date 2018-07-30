@@ -4,3 +4,35 @@ $secondaryColor: #fff;
 $contentFont: 'Arimo', sans-serif;
 $titleFont: 'Roboto', sans-serif;
 $logoFont: 'BankGothic Md BT', sans-serif;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "xs" {
+      @media (min-width: 0) {
+        @content;
+      }
+    }
+   
+    @if $breakpoint == "sm" {
+      @media (min-width: 576px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == "md" {
+      @media (min-width: 767px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == "lg" {
+      @media (min-width: 992px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint == "xl" {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    }
+  }

@@ -2,10 +2,14 @@
 
 .title {
   font-family: $titleFont;
-  font-size: 14px;
+  font-size: .6rem;
   font-weight: 500;
   letter-spacing: 0.03rem;
   z-index: 9;
+
+  @include respond-to('md') {
+    font-size: .8rem;
+  }
 
   span {
     cursor: pointer;
@@ -13,6 +17,33 @@
     -moz-user-select: none;    
     -ms-user-select: none; 
     user-select: none;
+  }
+}
+
+.logo {
+  font-family: $logoFont;
+  font-size: .7rem;
+
+  @media (min-width: 576px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.3rem;
+  }
+}
+
+.mail-icon-wrapper {
+  svg, image {
+    width: 21px;
+    height: 14px;
+  }
+}
+
+.facebook-icon-wrapper {
+  svg, image {
+    width: 10px;
+    height: 18px;
   }
 }
 
