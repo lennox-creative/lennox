@@ -18,15 +18,16 @@
     @include respond-to('md') {
       width: 60%;
       font-size: .8rem;
+      line-height: 1.2rem;
     }
   
     @include respond-to('lg') {
       width: 60%;
       font-size: 1rem;
+      line-height: 1.4rem;
     }
 
     @include respond-to('xl') {
       width: 50%;
-      font-size: 1rem;
     }
 }

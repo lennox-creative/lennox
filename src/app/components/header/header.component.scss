@@ -2,12 +2,20 @@
 
 .title {
   font-family: $titleFont;
-  font-size: .6rem;
+  font-size: .5rem;
   font-weight: 500;
   letter-spacing: 0.03rem;
   z-index: 9;
 
   @include respond-to('md') {
+    font-size: .6rem;
+  }
+
+  @include respond-to('lg') {
+    font-size: .7rem;
+  }
+
+  @include respond-to('xl') {
     font-size: .8rem;
   }
 
