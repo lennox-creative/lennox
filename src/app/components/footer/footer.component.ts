@@ -10,7 +10,6 @@ import { Subscription } from '../../../../node_modules/rxjs';
 })
 export class FooterComponent implements OnInit, OnDestroy {
   @ViewChild('bgMusicRef') bgMusicRef: ElementRef;
-  public audioElm: HTMLAudioElement;
   public footerText: string;
   public isMusic: boolean;ElementRef
   public isMusicOn: boolean;
@@ -21,10 +20,9 @@ export class FooterComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.footerText = environment.footerText;
     this.isMusicSubscription = this.isMusicService.isMusic$.subscribe((isMusic: boolean) => {
-      this.audioElm = this.bgMusicRef.nativeElement;
       this.isMusic = isMusic;
       if (isMusic) {
-        this.audioElm.play();
+        <HTMLAudioElement>this.bgMusicRef.nativeElement.play();
       }
     });
   }
