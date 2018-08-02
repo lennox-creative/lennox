@@ -3,5 +3,6 @@ export const environment = {
   logoText: "Lennox Creative",
   titleText: "portfolio",
   footerText: "סטודיו למיתוג גרפי המתמחה ביצירת מותגים אנרגטיים רבי עוצמה החל מרמת הקונספט, דרך בניית השפה המותגית ויישומה במדיות השונות.",
-  imagesAmount: 38
+  imagesAmount: 38,
+  envName: 'prod'
 };
