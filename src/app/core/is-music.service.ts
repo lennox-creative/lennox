@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class IsMusicService {
+@Injectable({ providedIn: 'root' })
+export class PlaygroundService {
   private _music = new BehaviorSubject<boolean>(false);
 
   get isMusic$() {

@@ -4,6 +4,7 @@
   <audio #bgMusicRef id="bg-music">
     <source src="/assets/media/bg-music.mp3" type="audio/mpeg">
   </audio>
+  
   <div class="music align-self-center {{isMusic ? '' : 'opacity-0'}}">
 
     <div class="on {{isMusicOn ? 'd-none' : ''}}" (click)="isMusicOn = true; bgMusicRef.pause()">

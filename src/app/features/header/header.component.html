@@ -18,10 +18,8 @@
 
   <div class="logo-and-title col-11 no-gutters d-flex">
     <div class="title align-self-center col-6 col-md-8 col-xl-9">
-      <span class="{{isMusic ? 'music-on' : ''}}" (click)="setMusic(true)">{{titleText}}</span>
+      <span class="{{(isMusic | async) ? 'music-on' : ''}}" (click)="setMusic(true)">{{titleText}}</span>
     </div>
-    <div class="text-uppercase col-6 col-md-4 col-xl-3 px-2 logo">
-      {{logoText}}
-    </div>
+    <div class="text-uppercase col-6 col-md-4 col-xl-3 px-2 logo">{{logoText}}</div>
   </div>
 </header>

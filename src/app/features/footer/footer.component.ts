@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { IsMusicService } from '../../services/is-music.service';
-import { Subscription } from '../../../../node_modules/rxjs';
+import { PlaygroundService } from '../../core/is-music.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-footer',
@@ -10,16 +10,16 @@ import { Subscription } from '../../../../node_modules/rxjs';
 })
 export class FooterComponent implements OnInit, OnDestroy {
   @ViewChild('bgMusicRef') bgMusicRef: ElementRef;
-  public footerText: string;
-  public isMusic: boolean;ElementRef
-  public isMusicOn: boolean;
+  footerText: string;
+  isMusic: boolean;
+  isMusicOn: boolean;
   private isMusicSubscription: Subscription;
 
-  constructor(private isMusicService: IsMusicService) { }
+  constructor(private playgroundService: PlaygroundService) { }
 
   ngOnInit() {
     this.footerText = environment.footerText;
-    this.isMusicSubscription = this.isMusicService.isMusic$.subscribe((isMusic: boolean) => {
+    this.isMusicSubscription = this.playgroundService.isMusic$.subscribe((isMusic: boolean) => {
       this.isMusic = isMusic;
       if (isMusic) {
         <HTMLAudioElement>this.bgMusicRef.nativeElement.play();

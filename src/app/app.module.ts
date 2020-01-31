@@ -1,25 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NumbersLoopPipe } from './pipe/numbers-loop.pipe';
-import { IsMusicService } from './services/is-music.service';
+import { PlaygroundService } from './core/is-music.service';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    SliderComponent,
-    FooterComponent,
-    NumbersLoopPipe
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
+    SharedModule
   ],
-  providers: [IsMusicService],
+  providers: [PlaygroundService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
